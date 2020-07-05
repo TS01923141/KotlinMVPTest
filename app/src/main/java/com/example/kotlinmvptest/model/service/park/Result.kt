@@ -1,6 +1,8 @@
 package com.example.kotlinmvptest.model.service.park
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 /**
 "E_Pic_URL": "http://www.zoo.gov.tw/iTAP/05_Exhibit/01_FormosanAnimal.jpg",
@@ -13,6 +15,7 @@ import com.google.gson.annotations.SerializedName
 "_id": 1,
 "E_URL": "http://www.zoo.gov.tw/introduce/gq.aspx?tid=12"
  **/
+@Parcelize
 data class Result(
     @SerializedName("E_Pic_URL") val picUrl: String,
     @SerializedName("E_Geo") val geo: String,
@@ -23,4 +26,4 @@ data class Result(
     @SerializedName("E_Memo") val memo: String,
     @SerializedName("_id") val id: String,
     @SerializedName("E_URL") val url: String
-)
+): Parcelable

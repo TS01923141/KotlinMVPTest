@@ -1,10 +1,11 @@
-package com.example.kotlinmvptest
+package com.example.kotlinmvptest.content.detail
 
 import com.example.kotlinmvptest.model.base.BaseContract
 import com.example.kotlinmvptest.model.service.park.Result
 import io.reactivex.rxjava3.core.Single
 
-public interface MainContract{
+
+public interface DetailContract{
 
     interface View : BaseContract.View {
 
@@ -12,7 +13,7 @@ public interface MainContract{
 
     interface Presenter : BaseContract.Presenter<View> {
 
-        fun getParkInfo(): Single<MutableList<Result>>
-        fun getParkListSize(): Int
+        fun setPlantResult(plantResult: com.example.kotlinmvptest.model.service.plant.Result)
+        fun getPlantResult(): com.example.kotlinmvptest.model.service.plant.Result
     }
 }

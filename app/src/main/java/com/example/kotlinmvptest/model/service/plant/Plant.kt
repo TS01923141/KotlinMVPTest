@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 /**
  *
-"limit": 1000,
+"LIMIT_UPDATE": 1000,
 "offset": 0,
 "count": 110,
 "sort": "",
@@ -13,7 +13,7 @@ import com.google.gson.annotations.SerializedName
 data class Plant(
     @SerializedName("limit") val limit : String,
     @SerializedName("offset") val offset : String,
-    @SerializedName("count") val count : String,
+    @SerializedName("count") val count : Int,
     @SerializedName("sort") val sort : String,
-    @SerializedName("results") val results : Result
+    @SerializedName("results") val results : ArrayList<Result>
 )

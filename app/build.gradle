@@ -28,6 +28,12 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
+    androidExtensions {
+        experimental = true
+    }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -67,4 +73,5 @@ dependencies {
     implementation 'com.jakewharton.rxbinding4:rxbinding-viewpager:4.0.0'
     implementation 'com.jakewharton.rxbinding4:rxbinding-viewpager2:4.0.0'
     implementation 'com.jakewharton.rxbinding4:rxbinding-material:4.0.0'
+    implementation "androidx.browser:browser:1.2.0"
 }

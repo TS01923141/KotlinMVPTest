@@ -1,6 +1,8 @@
 package com.example.kotlinmvptest.model.service.plant
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 /**
  *
@@ -42,6 +44,7 @@ import com.google.gson.annotations.SerializedName
 "F_Update": "2017/9/4",
 "_id": 1
  */
+@Parcelize
 data class Result(
     @SerializedName("F_Name_Latin") val nameLatin : String,
     @SerializedName("F_pdf02_ALT") val F_pdf02_ALT : String,
@@ -63,7 +66,7 @@ data class Result(
     @SerializedName("F_Brief")val brief : String,
     @SerializedName("F_Pic04_URL")val pic04Url : String,
     @SerializedName("F_Voice01_URL")val voice01Url : String,
-    @SerializedName("F_Feature")val feture : String,
+    @SerializedName("F_Feature")val feature : String,
     @SerializedName("F_Pic02_ALT")val pic02Alt : String,
     @SerializedName("F_Family")val family : String,
     @SerializedName("F_Voice03_ALT")val voice03Alt : String,
@@ -78,4 +81,4 @@ data class Result(
     @SerializedName("F_Voice03_URL")val voice03Url : String,
     @SerializedName("F_Update")val update : String,
     @SerializedName("_id")val id : String
-)
+): Parcelable
