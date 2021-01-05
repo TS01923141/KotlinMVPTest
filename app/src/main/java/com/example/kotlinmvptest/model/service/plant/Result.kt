@@ -60,7 +60,7 @@ data class Result(
     @SerializedName("F_Pic03_URL")val pic03Url : String,
     @SerializedName("F_Voice01_ALT")val voice01Alt : String,
     @SerializedName("F_AlsoKnown")val alsoKnown : String,
-    @SerializedName("F_Name_Ch")val nameCh : String,
+    @SerializedName("F_Name_Ch")val nameCh : String?,
     @SerializedName("F_Pic04_ALT")val pic04Alt : String,
     @SerializedName("F_Name_En")val nameEn : String,
     @SerializedName("F_Brief")val brief : String,

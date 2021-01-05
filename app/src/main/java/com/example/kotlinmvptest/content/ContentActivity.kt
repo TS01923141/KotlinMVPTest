@@ -62,7 +62,9 @@ class ContentActivity : AppCompatActivity() {
             .into(imageView_content_intro)
         textView_content_intro.text = viewModel.parkResult.info
         textView_content_category.text = viewModel.parkResult.category
-        textView_content_web.clicks().throttleFirst(3, TimeUnit.SECONDS).subscribe {
+        textView_content_web.clicks().throttleFirst(3, TimeUnit.SECONDS)
+            .autoDispose(AndroidLifecycleScopeProvider.from(this, Lifecycle.Event.ON_DESTROY))
+            .subscribe {
             var builder = CustomTabsIntent.Builder()
             var customTabIntent = builder.build()
             customTabIntent.intent.setPackage("com.android.chrome")

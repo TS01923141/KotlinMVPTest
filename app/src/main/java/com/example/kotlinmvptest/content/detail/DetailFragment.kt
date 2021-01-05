@@ -52,7 +52,9 @@ class DetailFragment : BaseFragment<DetailContract.View, DetailContract.Presente
             .into(imageView_detail_cover)
 
         var stringBuilder = StringBuilder()
-        stringBuilder.append(presenter.getPlantResult().nameCh)
+        if (presenter.getPlantResult().nameCh != null) {
+            stringBuilder.append(presenter.getPlantResult().nameCh)
+        }
         stringBuilder.append("\n")
         stringBuilder.append(presenter.getPlantResult().nameEn)
         stringBuilder.append("\n")
